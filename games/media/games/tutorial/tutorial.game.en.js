@@ -126,8 +126,10 @@ undum.game.situations = {
 
     "ir-a-evento": new undum.SimpleSituation(
         "<p>Con la ropa puesta ya solo queda <a href='llegada-evento'>dirigirse al evento</a>.\
-        No debe haber ning&uacuten problema por el camino, despu&eacutes de todo Nevada es \
-        el estado donde m&aacutes controlado se tiene el tema de los zombis.</p>"
+        &laquoNo debe haber ning&uacuten problema por el camino, despu&eacutes de todo Nevada es \
+        el estado donde m&aacutes controlado se tiene el tema de los zombis... Sola alg&uacuten\
+        que otro mordisquito tonto de vez en cu&aacutendo si se produce alguna brecha de seguridad.&raquo\
+        , dices.</p>"
     ),
 
     "llegada-evento": new undum.SimpleSituation(
