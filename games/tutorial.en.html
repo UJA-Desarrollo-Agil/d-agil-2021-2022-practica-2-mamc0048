@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <!-- Game Title: edit this -->
-    <title>Undum</title>
+    <title>Un día en el apocalipsis</title>
     <!-- End of Game Title -->
 
     <!-- Remove this if you don't use the Tangerine font in your
@@ -34,14 +34,14 @@
     <div id="toolbar">
       <!-- Set this to be a small version of the title, for the
            toolbar on mobile devices. -->
-      <h1>Undum</h1>
+      <h1>Un día en el apocalipsis</h1>
       <div class="nav">
-        <a href="#" class="button" id="menu-button">Menu</a>
+        <a href="#" class="button" id="menu-button">Menú</a>
       </div>
     </div>
     <ul id="menu">
-      <li><a href="#title, #content_wrapper">Story</a></li>
-      <li><a href="#character_panel">Character</a></li>
+      <li><a href="#title, #content_wrapper">Historia</a></li>
+      <li><a href="#character_panel">Personaje</a></li>
       <li><a href="#info_panel">Info</a></li>
     </ul>
 
@@ -51,22 +51,22 @@
         <div id="info_panel" class="tools left">
 
           <!-- Game Background: edit this -->
-          <h1>Undum</h1>
+          <h1>Resumen</h1>
           <p>
-            Undum is a pure client-side game framework for narrative
-            interactive fiction. It is designed for HTML&#x200A;5 and
-            CSS&#x200A;3. You can read more and download the source
-            code <a href="http://github.com/idmillington/undum">here</a>.
+            Comienza un nuevo día en el apocalipsis, pero hoy es un
+            día especial ya que vas a ver ese espectáculo que llevas
+            tanto tiempo esperando ver. ¿Conseguirás salir de casa,
+            ver el espectáculo y volver sin que ocurra nada inesperado?</a>.
           </p>
           <!-- End of Game Background -->
 
           <div class='buttons'>
-            <button id="save">Save</button><button id="erase">Erase</button>
+            <button id="save">Guardar</button><button id="erase">Borrar</button>
           </div>
         </div>
 
         <div id="character_panel" class="tools right">
-          <h1>Character</h1>
+          <h1>Personaje</h1>
           <div id="character">
             <div id="character_text">
               <div id="character_text_content"></div>
@@ -81,14 +81,13 @@
           <div class="label">
 
             <!-- Game Title: edit this -->
-            <h1>The Undum Tutorial <span class='fancy'>&amp;</span><br>
-              Interactive Example</h1>
-            <h2>by I D Millington</h2>
+            <h1>Un día en el<br>
+              Apocalipis</h1>
+            <h2>por Martín Ángel Martín Caño</h2>
             <!-- End of Game Title -->
 
-            <noscript><p class="noscript_message">This game requires 
-              Javascript.</p></noscript>
-            <p class="click_message">click to begin</p>
+            <noscript><p class="noscript_message">El comienzo de un nuevo día.</p></noscript>
+            <p class="click_message">Haz click para comenzar tu aventura.</p>
           </div>
         </div>
 
@@ -100,11 +99,11 @@
 
         <div id="legal">
           <!-- Your Copyright: edit this -->
-          <p>Content and additional software and design &copy; 2010 IDM.</p>
+          <p>Hecho por Martín Ángel Martín Caño en el curso 2021/22.</p>
           <!-- End of Your Copyright -->
 
           <!-- This line is totally optional. -->
-          <p>Created with <a href="http://idmillington.github.io/undum/">Undum</a>.</p>
+          <p>Creado con <a href="http://idmillington.github.io/undum/">Undum</a>.</p>
         </div>
       </div>
     </div> <!-- End of div.page -->
@@ -112,29 +111,28 @@
     <!-- Holds UI elements that will be cloned and placed in the main
          page. This block itself is always hidden. -->
     <div id="ui_library">
-      <div id="quality" class="quality">
-        <span class="name" data-attr="name"></span>
-        <span class="value" data-attr="value"></span>
-      </div>
-
-      <div id="quality_group" class="quality_group">
-        <h2 data-attr="title"></h2>
-        <div class="qualities_in_group">
+        <div id="quality" class="quality">
+            <span class="name" data-attr="name"></span>
+            <span class="value" data-attr="value"></span>
         </div>
-      </div>
 
-      <div id="progress_bar" class="progress_bar">
-        <span class="name" data-attr="name"></span>
-        <span class="value" data-attr="value"></span>
-        <div class="progress_bar_track">
-          <div class="progress_bar_color" data-attr="width">
-          </div>
+        <div id="quality_group" class="quality_group">
+            <h2 data-attr="title"></h2>
+            <div class="qualities_in_group">
+            </div>
         </div>
-        <span class="left_label" data-attr="left_label"></span>
-        <span class="right_label" data-attr="right_label"></span>
-      </div>
+        <div id="progress_bar" class="progress_bar">
+            <span class="name" data-attr="name"></span>
+            <span class="value" data-attr="value"></span>
+            <div class="progress_bar_track">
+                <div class="progress_bar_color" data-attr="width">
+                </div>
+            </div>
+            <span class="left_label" data-attr="left_label"></span>
+            <span class="right_label" data-attr="right_label"></span>
+        </div>
 
-      <hr id="turn_separator">
+        <hr id="turn_separator">
     </div>
 
     <!-- You don't need to have this block here, but it is defined in
@@ -234,6 +232,20 @@
           <a href='hub'>Topic List</a> or choose another option from
           this example:</p>
       </div>
+
+        <div id="eleccion-ropa" class="situation" data-choices="#ropa">
+            <h1></h1>
+            <p class="transient">Recuerda que hoy vas a ver el espectáculo
+            que tanto has estado esperando, te pondrás tus mejores galas, ¿no?</p>
+        </div>
+
+        <div id="vuelta-a-casa" class="situation" data-choices="#final">
+            <h1>Fin del espectáculo</h1>
+            <p class="transient">Tras 4 horas de gritos, motores rugiendo y
+            zombis siendo cercenados, el show había llegado a su fin.
+            Tocaba volver a casa.</p>
+        </div>
+        
     </div>
 
     <!-- Load the libraries we depend on -->
